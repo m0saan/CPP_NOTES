@@ -88,6 +88,8 @@ namespace constants {
 
 * Const member functions
   - Const class objects can only explicitly call const member functions.
-  - A const member function is a member function that guarantees it will not modify the object or call any non-const member functions (as they may modify the object).
+  - A const member function is a member function that guarantees it will not modify the object or call any non-const member functions (as they may modify      the object).
   - Const member functions can also be called by non-const objects.
   - ` Best practice Make any member function that does not modify the state of the class object const, so that it can be called by const objects.`
+  - Const members can not return non-const references to members
+  - Because passing objects by const reference is common, your classes should be const-friendly. That means making any member function that does not          modify the state of the class object const!
