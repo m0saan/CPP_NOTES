@@ -93,3 +93,12 @@ namespace constants {
   - ` Best practice Make any member function that does not modify the state of the class object const, so that it can be called by const objects.`
   - Const members can not return non-const references to members
   - Because passing objects by const reference is common, your classes should be const-friendly. That means making any member function that does not          modify the state of the class object const!
+* Static keyword
+  - static variables keep their values and are not destroyed even after they go out of scope when declared in functions.
+  - The static keyword has another meaning when applied to global variables -- it gives them internal linkage (which restricts them from being seen/used     outside of the file they are defined in).
+  - Static members are not associated with class objects.
+  - it is better to think of static members as belonging to the class itself, not to the objects of the class.
+  - it can be accessed directly using the class name and the scope resolution operator (Class::static_member).
+  - When we declare a static member variable inside a class, we’re telling the compiler about the existence of a static member variable, but not             actually defining it (much like a forward declaration).
+  - Because static member variables are not part of the individual class objects (they are treated similarly to global variables, and get initialized       when the program starts), you must explicitly define the static member outside of the class, in the global scope.
+  - If the static member variable is a const int, no explicit definition line is needed.
