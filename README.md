@@ -85,3 +85,7 @@ namespace constants {
     - This can be declared as the following type alias:
         - ` using distance_t = double; // define distance_t as an alias for type double`
     + The two are functionally equivalent.
+
+* Const member functions
+  - const class objects can only explicitly call const member functions.
+  - A const member function is a member function that guarantees it will not modify the object or call any non-const member functions (as they may modify the object).
