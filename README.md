@@ -102,3 +102,7 @@ namespace constants {
   - When we declare a static member variable inside a class, we’re telling the compiler about the existence of a static member variable, but not             actually defining it (much like a forward declaration).
   - Because static member variables are not part of the individual class objects (they are treated similarly to global variables, and get initialized       when the program starts), you must explicitly define the static member outside of the class, in the global scope.
   - If the static member variable is a const int, no explicit definition line is needed.
+ 
+* Static member functions
+  - Static member functions have no *this pointer.
+  - static member functions can directly access other static members (variables or functions), but not non-static members. This is because non-static members         must belong to a class object, and static member functions have no class object to work with!
