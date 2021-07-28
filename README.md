@@ -106,3 +106,13 @@ namespace constants {
 * Static member functions
   - Static member functions have no *this pointer.
   - static member functions can directly access other static members (variables or functions), but not non-static members. This is because non-static members         must belong to a class object, and static member functions have no class object to work with!
+* Friend functions and classes
+  - A friend function is a function that can access the private members of a class as though it were a member of that class. In all other regards, the friend         function is just like a normal function. A friend function may be either a normal function, or a member function of another class. To declare a friend           function, simply use the friend keyword in front of the prototype of the function you wish to be a friend of the class. It does not matter whether you           declare the friend function in the private or public section of the class.
+  - Note that we have to pass an Class object to friend func(). This is because func() is not a member function. It does not have a *this pointer, nor does it       have a Class object to work with, unless given one.
+  - A function can be a friend of more than one class at the same time.
+  - It is also possible to make an entire class a friend of another class. This gives all of the members of the friend class access to the private members of the     other class.
+  - A few additional notes on friend classes. First, even though Display is a friend of Storage, Display has no direct access to the *this pointer of Storage         objects. Second, just because Display is a friend of Storage, that does not mean Storage is also a friend of Display. If you want two classes to be friends       of each other, both must declare the other as a friend. Finally, if class A is a friend of B, and B is a friend of C, that does not mean A is a friend of C.
+  - You can make a single member function a friend. But u musy move the definition of class with member function to be friend before the definition of class that declares the friend member function.
+  - Friending is commonly used when defining overloaded operators (which we’ll cover in a later chapter), or less commonly, when two or more classes need to work together in an intimate way.
+
+  - Note that making a specific member function a friend requires the full definition for the class of the member function to have been seen first.
