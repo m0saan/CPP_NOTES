@@ -116,3 +116,11 @@ namespace constants {
   - Friending is commonly used when defining overloaded operators (which we’ll cover in a later chapter), or less commonly, when two or more classes need to work together in an intimate way.
 
   - Note that making a specific member function a friend requires the full definition for the class of the member function to have been seen first.
+
+* Dynamic memory allocation with new and delete
+  - A pointer that is pointing to deallocated memory is called a dangling pointer. Indirection through- or deleting a dangling pointer will lead to undefined         behavior.
+  - Set deleted pointers to 0 (or nullptr in C++11) unless they are going out of scope immediately afterward.
+  - ` int* value { new (std::nothrow) int }; // value will be set to a null pointer if the integer allocation fails `
+  - Using delete -> If ptr is non-null, the dynamically allocated variable will be deleted. If it is null, nothing will happen.
+
+
