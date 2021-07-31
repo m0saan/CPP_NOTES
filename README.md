@@ -123,4 +123,7 @@ namespace constants {
   - ` int* value { new (std::nothrow) int }; // value will be set to a null pointer if the integer allocation fails `
   - Using delete -> If ptr is non-null, the dynamically allocated variable will be deleted. If it is null, nothing will happen.
 
-
+* Pointers and const
+  - Pointer to const value
+    - A pointer to a const value is a (non-const) pointer that points to a constant value.
+    - To declare a pointer to a const value, use the const keyword before the data type:
