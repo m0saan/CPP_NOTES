@@ -159,3 +159,6 @@ namespace constants {
  
   const int& ref3{ 6 }; // okay, 6 is an r-value
   ```
+  - References to r-values extend the lifetime of the referenced value
+    - Normally r-values have expression scope, meaning the values are destroyed at the end of the expression in which they are created.
+    - When a reference to a const value is initialized with an r-value, the lifetime of the r-value is extended to match the lifetime of the reference  
