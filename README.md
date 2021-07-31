@@ -127,8 +127,8 @@ namespace constants {
   - Pointer to const value
     - A pointer to a const value is a (non-const) pointer that points to a constant value.
     - To declare a pointer to a const value, use the const keyword before the data type:
-    ` 
-    - const int value{ 5 };
-    - const int* ptr{ &value };
-    - *ptr = 6;
-    ` 
+    ``` 
+    const int value{ 5 };
+    const int* ptr{ &value };
+    *ptr = 6;
+    ``` 
