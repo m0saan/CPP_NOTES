@@ -141,12 +141,11 @@ namespace constants {
     - It is possible to declare a const pointer to a const value by using the const keyword both before the type and before the variable name
     - A const pointer to a const value can not be set to point to another address, nor can the value it is pointing to be changed through the pointer.
   - Recapping:
-      ``` 
-      
+    ```
     A non-const pointer can be redirected to point to other addresses.
     A const pointer always points to the same address, and this address can not be changed. 
 
     A pointer to a non-const value can change the value it is pointing to. These can not point to a const value.
     A pointer to a const value treats the value as const (even if it is not), and thus can not change the value it is pointing to. 
-      ``` 
+    ``` 
       
