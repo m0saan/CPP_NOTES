@@ -148,4 +148,14 @@ namespace constants {
     A pointer to a non-const value can change the value it is pointing to. These can not point to a const value.
     A pointer to a const value treats the value as const (even if it is not), and thus can not change the value it is pointing to. 
     ``` 
-      
+* Reference to const value
+  - Unlike references to non-const values, which can only be initialized with non-const l-values, references to const values can be initialized with         non-const l-values, const l-values, and r-values. 
+  ```
+  int x{ 5 };
+  const int& ref1{ x }; // okay, x is a non-const l-value
+ 
+  const int y{ 7 };
+  const int& ref2{ y }; // okay, y is a const l-value
+ 
+  const int& ref3{ 6 }; // okay, 6 is an r-value
+  ```
