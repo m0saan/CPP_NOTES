@@ -131,4 +131,22 @@ namespace constants {
     const int value{ 5 };
     const int* ptr{ &value };
     *ptr = 6;
-    ``` 
+    ```
+    - A pointer to a constant variable can point to a non-constant variable. Think of it this way: a pointer to a constant variable treats the variable     as constant when it is accessed through the pointer, regardless of whether the variable was initially defined as const or not.
+    - Because a pointer to a const value is not const itself (it just points to a const value), the pointer can be redirected to point at other values.
+  - Const pointers
+    - A const pointer is a pointer whose value can not be changed after initialization.
+    - Because the value being pointed to is still non-const, it is possible to change the value being pointed to indrectly through the const pointer.
+  - Const pointer to a const value
+    - It is possible to declare a const pointer to a const value by using the const keyword both before the type and before the variable name
+    - A const pointer to a const value can not be set to point to another address, nor can the value it is pointing to be changed through the pointer.
+  - Recapping:
+      ``` 
+      
+    A non-const pointer can be redirected to point to other addresses.
+    A const pointer always points to the same address, and this address can not be changed. 
+
+    A pointer to a non-const value can change the value it is pointing to. These can not point to a const value.
+    A pointer to a const value treats the value as const (even if it is not), and thus can not change the value it is pointing to. 
+      ``` 
+      
