@@ -162,3 +162,7 @@ namespace constants {
   - References to r-values extend the lifetime of the referenced value
     - Normally r-values have expression scope, meaning the values are destroyed at the end of the expression in which they are created.
     - When a reference to a const value is initialized with an r-value, the lifetime of the r-value is extended to match the lifetime of the reference  
+* Virtual functions and polymorphism
+  - A virtual function is a special type of function that, when called, resolves to the most-derived version of the function that exists between the        base and derived class. This capability is known as polymorphism.
+  - A derived function is considered a match if it has the same signature (name, parameter types, and whether it is const) and return type as the base      version of the function. Such functions are called overrides.
+  - 
