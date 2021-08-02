@@ -165,3 +165,8 @@ namespace constants {
 * Virtual functions and polymorphism
   - A virtual function is a special type of function that, when called, resolves to the most-derived version of the function that exists between the        base and derived class. This capability is known as polymorphism.
   - A derived function is considered a match if it has the same signature (name, parameter types, and whether it is const) and return type as the base      version of the function. Such functions are called overrides. 
+* Pure virtual functions, abstract base classes, and interface classes
+  - C++ allows you to create a special kind of virtual function called a pure virtual function (or abstract function) that has no body at all! A pure     virtual function simply acts as a placeholder that is meant to be redefined by derived classes. 
+  - Using a pure virtual function has two main consequences: First, any class with one or more pure virtual functions becomes an abstract base class,     which means that it can not be instantiated!
+  - An interface class is a class that has no member variables, and where all of the functions are pure virtual!
+  - 
